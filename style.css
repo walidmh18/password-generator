@@ -385,3 +385,39 @@ input{
    color: #dc3545;
    margin-top: 1rem;
 }
+header{
+   z-index: 100;
+}
+
+@media (max-width:1440px) {
+   .generator{
+      width: 60vw;
+   }
+}
+
+@media (max-width:1024px) {
+   .generator{
+      width: 75vw;
+   }
+}
+
+
+@media (max-width:768px) {
+   .generator{
+      width: 85vw;
+   }
+}
+
+@media (max-width:425px) {
+   .generator{
+      width: 95vw;
+   }
+   .length{
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+   }
+   header{
+      font-size: 0.8rem;
+   }
+}
