@@ -38,7 +38,7 @@ input{
 
 
 .firstPage{
-   display: none;
+   display: block;
 }
 .firstPage .text{
    position: absolute;
@@ -210,6 +210,7 @@ input{
    height: 100vh;
    position: relative;
    background: var(--dark-color);
+   display: none;
 }
 
 .secondPage header{
