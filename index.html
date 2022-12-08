@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"
+      integrity="sha512-yAr4fN9WZH6hESbOwoFZGtSgOP+LSZbs/JeoDr02pOX4yUFfI++qC9YwIQXIGffhnzliykJtdWTV/v3PxSz8aw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="firstPage">
+      <div class="text">
+        <h1>Generate a Strong Password Online!</h1>
+        <button onclick="moveToSecondPage()">Generate Now</button>
+      </div>
+      <div class="area">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+    <div class="secondPage">
+      <header>
+        <h1>Password Generator</h1>
+        <a href="#">View More Like this</a>
+      </header>
+      <div class="generator">
+        <h2>Generator</h2>
+        <div id="genOutputContainer">
+          <span id="genOutput">p4S$w0rD</span>
+          <div id="copyToClipboard" onclick="copyToClipBoard()"></div>
+        </div>
+        <div class="length">
+          <label for="passwordLength">Password Length:</label>
+          <div>
+            <input
+              type="range"
+              name="passwordLength"
+              id="passwordLength"
+              min="6"
+              max="16"
+              value="8"
+              steps="10"
+            />
+            <output id="passwordLengthOutput">aa</output>
+          </div>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            name="uppercase"
+            id="uppercase"
+            class="settingsInp"
+            checked
+          />
+          <label for="uppercase">Uppercase</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="lowercase"
+            id="lowercase"
+            class="settingsInp"
+            checked
+          />
+          <label for="lowercase">Lowercase</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="numbers"
+            id="numbers"
+            class="settingsInp"
+            checked
+          />
+          <label for="numbers">Numbers</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="symbols"
+            id="symbols"
+            class="settingsInp"
+            checked
+          />
+          <label for="symbols">Symbols</label>
+        </div>
+        <div class="err"></div>
+        <div class="strength">
+          <p>Strength</p>
+          <div class="strengthDisplay strong">
+            <p id="strengthStatus">strong</p>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <button onclick="generate()" id="generateBtn">generate</button>
+      </div>
+    </div>
+  </body>
+</html>
